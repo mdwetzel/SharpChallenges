@@ -24,5 +24,23 @@ namespace PalindromeTest
         {
             Assert.IsFalse(Palindrome.IsPalindrome("Robert"));
         }
+
+        [TestMethod]
+        public void IsPalindromeLoopShouldReturnFalseOnNonPalindrome()
+        {
+            Assert.IsFalse(Palindrome.IsPalindromeLoop("Robert"));
+        }
+
+        [TestMethod]
+        public void IsPalindromeLoopShouldReturnTrueOnProperPalindrome()
+        {
+            Assert.IsTrue(Palindrome.IsPalindromeLoop("bob"));
+        }
+
+        [TestMethod]
+        public void IsPalindromeLoopShouldReturnFalseOnMixedCase()
+        {
+            Assert.IsFalse(Palindrome.IsPalindromeLoop("Bob"));
+        }
     }
 }

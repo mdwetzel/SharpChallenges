@@ -16,6 +16,23 @@ namespace StringHelper
             string reversed = new string(stringArray);
             return value == reversed;
         }
+
+        public static bool IsPalindromeLoop(string value)
+        {
+            for (int i = 0; i < value.Length; i++) {
+                if (i == value.Length / 2) {
+                    return true;
+                }
+
+                if (value[i] == value[value.Length - 1 - i]) {
+                    continue;
+                } else {
+                    return false;
+                }
+            }
+
+            return false;
+        }
     }
 }
 
